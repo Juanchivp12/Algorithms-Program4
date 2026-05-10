@@ -38,8 +38,8 @@ public class Prog4Test {
 			}
 			System.out.print(c[res[i]].Id());
 			System.out.print(" ");
-			sum = sum + c[i].Benefit();
-			cost = cost + c[i].Cost();
+			sum = sum + c[res[i]].Benefit();
+			cost = cost + c[res[i]].Cost();
 
 		}
 		System.out.println(" Cost : " + cost + "   Benefit : " + sum);
@@ -56,8 +56,8 @@ public class Prog4Test {
 			}
 			System.out.print(c[res2[i]].Id());
 			System.out.print(" ");
-			sum = sum + c[i].Benefit();
-			cost = cost + c[i].Cost();
+			sum = sum + c[res2[i]].Benefit();
+			cost = cost + c[res2[i]].Cost();
 
 		}
 		System.out.println(" Cost : " + cost + "   Benefit : " + sum);
