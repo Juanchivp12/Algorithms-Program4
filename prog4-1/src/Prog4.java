@@ -11,10 +11,12 @@ public class Prog4 {
       int[][] choice = new int[pos + 1][budget + 1]; // tracks which candidate we picked
 
       for (int row = 1; row <= pos; row++) {
-         int base = (row - 1) * k; // starting index for this positions candidates
+         // starting index for this positions candidates
+         int base = (row - 1) * k;
 
          for (int column = 0; column <= budget; column++) {
-            dp[row][column] = dp[row - 1][column]; // default -> dont pick anyone for this postiion
+            // dont pick anyone for this postiion
+            dp[row][column] = dp[row - 1][column];
             choice[row][column] = -1;
 
             // try each candidate for this position
@@ -63,7 +65,9 @@ public class Prog4 {
 
          for (int column = 0; column <= budget; column++) {
             for (int s = 0; s <= 1; s++) {
-               dp[row][column][s] = (s > 0) ? Math.max(dp[row-1][column][s], dp[row-1][column][s-1]) : dp[row-1][column][s];
+               dp[row][column][s] = (s > 0) ?
+                       Math.max(dp[row-1][column][s], dp[row-1][column][s-1]) :
+                       dp[row-1][column][s];
                choice[row][column][s] = -1;
 
                for (int j = 0; j < k; j++) {
