@@ -2,10 +2,11 @@ import java.util.ArrayList;
 
 public class Prog4 {
 
+
    public static int[] Prog4(Candidate[] c, int budget, int pos, int k) {
 
       // dp table -> rows are positions, cols are remaining budget
-      // basically knapsack but we pick at most 1 candidate per position
+      // basically knapsack
       float[][] dp = new float[pos + 1][budget + 1];
       int[][] choice = new int[pos + 1][budget + 1]; // tracks which candidate we picked
 
