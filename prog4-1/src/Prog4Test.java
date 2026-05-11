@@ -16,7 +16,7 @@ public class Prog4Test {
 		p = fin.nextInt();
 		b = fin.nextInt();
 		k = fin.nextInt();
-	        Candidate c[] = new Candidate[p*k];
+		Candidate c[] = new Candidate[p*k];
 			
 		for (int i = 0; i < p * k; i++)
 		{
