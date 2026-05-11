@@ -65,9 +65,8 @@ public class Prog4 {
 
          for (int column = 0; column <= budget; column++) {
             for (int s = 0; s <= 1; s++) {
-               dp[row][column][s] = (s > 0) ?
-                       Math.max(dp[row-1][column][s], dp[row-1][column][s-1]) :
-                       dp[row-1][column][s];
+               // ternary operator to make this into 1 line (I think its cleaner and more elegant)
+               dp[row][column][s] = (s > 0) ? Math.max(dp[row-1][column][s], dp[row-1][column][s-1]) : dp[row-1][column][s];
                choice[row][column][s] = -1;
 
                for (int j = 0; j < k; j++) {
